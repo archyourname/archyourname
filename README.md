@@ -4,7 +4,7 @@
 
 ![archyourname](img/1.png)
 # 💫 About Me:
-💻 Computer Enthusiast |<br>🧠 Learning, Building & Exploring Technology |<br>⚙️ Code • AI • Hardware
+💻 Computer Enthusiast <br>🧠 Learning, Building & Exploring Technology <br>⚙️ Code • AI • Hardware
 
 
 ## 🌐 Social Platform:
