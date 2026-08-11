@@ -1,0 +1,56 @@
+<svg width="600" height="120" viewBox="0 0 600 120" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .banner-bg {
+      fill: #0a1a1a;
+    }
+    .type-text {
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 28px;
+      font-weight: bold;
+      fill: #00e5cc;
+    }
+    .sub-text {
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 18px;
+      fill: #37b6a8;
+    }
+
+    /* Full cycle = 6s: type line1 (0-2s), type line2 (2-4s), hold (4-5s), reset (5-6s), repeat */
+    .line1-clip {
+      animation: reveal1 6s steps(20, end) infinite;
+    }
+    .line2-clip {
+      animation: reveal2 6s steps(19, end) infinite;
+    }
+
+    @keyframes reveal1 {
+      0%          { width: 0; }
+      33.3%       { width: 340px; }
+      83.3%       { width: 340px; }
+      91.6%       { width: 0; }
+      100%        { width: 0; }
+    }
+    @keyframes reveal2 {
+      0%, 33.3%   { width: 0; }
+      66.6%       { width: 330px; }
+      83.3%       { width: 330px; }
+      91.6%       { width: 0; }
+      100%        { width: 0; }
+    }
+
+  </style>
+
+  <rect class="banner-bg" width="600" height="120" rx="8"/>
+
+  <!-- Line 1 -->
+  <clipPath id="clip1">
+    <rect class="line1-clip" x="0" y="15" height="40"/>
+  </clipPath>
+  <text class="type-text" x="10" y="45" clip-path="url(#clip1)">Hi, I'm PontMedusa 👋</text>
+
+  <!-- Line 2 -->
+  <clipPath id="clip2">
+    <rect class="line2-clip" x="0" y="65" height="30"/>
+  </clipPath>
+  <text class="sub-text" x="10" y="90" clip-path="url(#clip2)">Computer Enthusiast</text>
+</svg>
