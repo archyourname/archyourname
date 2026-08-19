@@ -131,7 +131,7 @@
 # 📊 GitHub Stats:
 <div align="center">
   <img 
-    src="https://streak-stats.demolab.com/?user=PontMedusa&theme=dracula"
+    src="https://streak-stats.demolab.com/?user=archyourname&theme=dracula"
     height="150"
     alt="GitHub Streak"
   />
