@@ -129,8 +129,12 @@
 </div>
 
 # 📊 GitHub Stats:
-<div data-importer="stats" align="center">
-  <img src="https://streak-stats.demolab.com?user=archyourname&locale=en&mode=daily&theme=dracula&hide_border=false&border_radius=5&order=3" height="150" alt="streak graph"  />
+<div align="center">
+  <img 
+    src="https://streak-stats.demolab.com/?user=USERNAME_GITHUB&theme=dracula"
+    height="150"
+    alt="GitHub Streak"
+  />
 </div>
 
 ###
