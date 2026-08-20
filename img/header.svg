@@ -13,6 +13,12 @@
       <stop offset="1" stop-color="#071827"/>
     </linearGradient>
 
+    <radialGradient id="hubGlow">
+      <stop offset="0" stop-color="#00e5cc" stop-opacity=".20"/>
+      <stop offset=".55" stop-color="#00e5cc" stop-opacity=".05"/>
+      <stop offset="1" stop-color="#00e5cc" stop-opacity="0"/>
+    </radialGradient>
+
     <!-- =========================
          CITY GLOW
     ========================== -->
