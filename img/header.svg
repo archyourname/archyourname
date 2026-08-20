@@ -1,271 +1,30 @@
-<svg width="600" height="120" viewBox="0 0 600 120"
-     xmlns="http://www.w3.org/2000/svg"
-     xmlns:xlink="http://www.w3.org/1999/xlink">
-
-  <defs>
-
-    <!-- =========================
-         BACKGROUND
-    ========================== -->
-
-    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#061313"/>
-      <stop offset="1" stop-color="#071827"/>
-    </linearGradient>
-
-    <radialGradient id="hubGlow">
-      <stop offset="0" stop-color="#00e5cc" stop-opacity=".20"/>
-      <stop offset=".55" stop-color="#00e5cc" stop-opacity=".05"/>
-      <stop offset="1" stop-color="#00e5cc" stop-opacity="0"/>
-    </radialGradient>
-
-    <!-- =========================
-         CITY GLOW
-    ========================== -->
-
-    <linearGradient id="cityGlow"
-                    x1="0" y1="0"
-                    x2="0" y2="1">
-
-      <stop offset="0"
-            stop-color="#12323a"
-            stop-opacity=".55"/>
-
-      <stop offset="1"
-            stop-color="#061313"
-            stop-opacity=".05"/>
-
-    </linearGradient>
-
-
-    <!-- =========================
-         WATER GLOW
-    ========================== -->
-
-    <radialGradient id="waterGlow">
-
-      <stop offset="0"
-            stop-color="#00e5cc"
-            stop-opacity=".12"/>
-
-      <stop offset=".45"
-            stop-color="#00e5cc"
-            stop-opacity=".04"/>
-
-      <stop offset="1"
-            stop-color="#00e5cc"
-            stop-opacity="0"/>
-
-    </radialGradient>
-
-
-    <!-- =========================
-         SOFT GLOW
-    ========================== -->
-
-    <filter id="softGlow"
-            x="-100%"
-            y="-100%"
-            width="300%"
-            height="300%">
-
-      <feGaussianBlur stdDeviation="4"/>
-
-    </filter>
-
-
-    <!-- =========================
-         LOGO GLOW
-    ========================== -->
-
-    <filter id="logoGlow"
-            x="-100%"
-            y="-100%"
-            width="300%"
-            height="300%">
-
-      <feGaussianBlur
-        in="SourceGraphic"
-        stdDeviation="1.5"
-        result="blur"/>
-
-      <feMerge>
-
-        <feMergeNode
-          in="blur"/>
-
-        <feMergeNode
-          in="SourceGraphic"/>
-
-      </feMerge>
-
-    </filter>
-
-  </defs>
-
-
-  <!-- =====================================================
-       BACKGROUND
-  ====================================================== -->
-
-  <rect
-    width="600"
-    height="120"
-    rx="9"
-    fill="url(#bg)"
-    stroke="#123333"
-    stroke-width="1"/>
-
-
-  <!-- =====================================================
-       CITY / TECHNOLOGY BACKGROUND
-  ====================================================== -->
-
-  <g opacity=".38">
-
-    <!-- horizon -->
-
-    <path
-      d="M0 105H600"
-      stroke="#0b6870"
-      stroke-width="1"/>
-
-
-    <!-- buildings -->
-
-    <path
-      d="
-        M370 105V74H380V105
-        M383 105V61H394V105
-        M397 105V79H408V105
-        M411 105V52H423V105
-        M426 105V70H438V105
-        M441 105V59H452V105
-        M455 105V44H470V105
-        M474 105V67H487V105
-        M491 105V52H505V105
-        M509 105V74H521V105
-        M525 105V57H539V105
-        M543 105V68H557V105
-        M561 105V48H576V105
-        M580 105V72H600V105
-      "
-      fill="url(#cityGlow)"/>
-
-
-    <!-- building windows -->
-
-    <g
-      fill="#00e5cc"
-      opacity=".22">
-
-      <path d="M386 67h4v4h-4zM386 77h4v4h-4zM386 87h4v4h-4z"/>
-
-      <path d="M415 58h4v4h-4zM415 68h4v4h-4zM415 78h4v4h-4z"/>
-
-      <path d="M445 65h4v4h-4zM445 75h4v4h-4zM445 85h4v4h-4z"/>
-
-      <path d="M460 51h4v4h-4zM460 61h4v4h-4zM460 71h4v4h-4z"/>
-
-      <path d="M496 59h4v4h-4zM496 69h4v4h-4zM496 79h4v4h-4z"/>
-
-      <path d="M530 64h4v4h-4zM530 74h4v4h-4zM530 84h4v4h-4z"/>
-
-      <path d="M566 55h4v4h-4zM566 65h4v4h-4zM566 75h4v4h-4z"/>
-
-    </g>
-
-  </g>
-
-
-  <!-- =====================================================
-       ATMOSPHERIC WATER LIGHT
-  ====================================================== -->
-
-  <ellipse
-    cx="510"
-    cy="68"
-    rx="105"
-    ry="55"
-    fill="url(#waterGlow)"
-    filter="url(#softGlow)"/>
-
-
-  <!-- =====================================================
-       TEXT
-  ====================================================== -->
-
-  <text
-    x="12"
-    y="45"
-    font-family="Courier New, monospace"
-    font-size="27"
-    font-weight="bold"
-    fill="#00e5cc">
-
-    Hi, I'm PontMedusa
-
-  </text>
-
-
-  <text
-    x="12"
-    y="87"
-    font-family="Courier New, monospace"
-    font-size="17"
-    fill="#37b6a8">
-
-    Computer Enthusiast
-
-  </text>
-
-
-  <!-- =====================================================
-       SMALL DECORATIVE LINE
-  ====================================================== -->
-
-  <path
-    d="M12 96H230"
-    stroke="#00e5cc"
-    stroke-width=".6"
-    opacity=".25"/>
-
 <!-- =====================================================
-     FLOATING REAL BRAND LOGOS
-     INTERNET / REMOTE LOGOS
-     WATER BUBBLE MOTION
+     FLOATING BRAND LOGOS
+     REAL SVG ASSETS FROM GITHUB
+     WATER / BUBBLE MOTION
 ====================================================== -->
 
 <g filter="url(#logoGlow)">
-
 
   <!-- =================================================
        NVIDIA
   ================================================== -->
 
   <g>
-
     <animateTransform
       attributeName="transform"
       type="translate"
-      values="
-        0 0;
-        2 -4;
-        5 -1;
-        3 4;
-        -1 2;
-        0 0"
+      values="0 0; 2 -4; 5 -1; 3 4; -1 2; 0 0"
       dur="5.4s"
       repeatCount="indefinite"/>
 
     <image
-      href="https://cdn.simpleicons.org/nvidia"
-      x="393"
-      y="25"
+      href="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/nvidia.svg"
+      x="390"
+      y="24"
       width="36"
-      height="22"
+      height="24"
       preserveAspectRatio="xMidYMid meet"/>
-
   </g>
 
 
@@ -274,28 +33,20 @@
   ================================================== -->
 
   <g>
-
     <animateTransform
       attributeName="transform"
       type="translate"
-      values="
-        0 0;
-        -3 -3;
-        -5 1;
-        -2 5;
-        3 3;
-        0 0"
+      values="0 0; -3 -3; -5 1; -2 5; 3 3; 0 0"
       dur="6.2s"
       repeatCount="indefinite"/>
 
     <image
-      href="https://cdn.simpleicons.org/msi"
-      x="432"
+      href="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/msi.svg"
+      x="430"
       y="17"
       width="34"
       height="26"
       preserveAspectRatio="xMidYMid meet"/>
-
   </g>
 
 
@@ -304,28 +55,20 @@
   ================================================== -->
 
   <g>
-
     <animateTransform
       attributeName="transform"
       type="translate"
-      values="
-        0 0;
-        3 -3;
-        5 1;
-        2 5;
-        -2 2;
-        0 0"
+      values="0 0; 3 -3; 5 1; 2 5; -2 2; 0 0"
       dur="5.8s"
       repeatCount="indefinite"/>
 
     <image
-      href="https://cdn.simpleicons.org/intel"
-      x="474"
-      y="22"
+      href="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/intel.svg"
+      x="472"
+      y="20"
       width="36"
-      height="23"
+      height="25"
       preserveAspectRatio="xMidYMid meet"/>
-
   </g>
 
 
@@ -334,28 +77,20 @@
   ================================================== -->
 
   <g>
-
     <animateTransform
       attributeName="transform"
       type="translate"
-      values="
-        0 0;
-        -2 -4;
-        -4 0;
-        -2 4;
-        2 3;
-        0 0"
+      values="0 0; -2 -4; -4 0; -2 4; 2 3; 0 0"
       dur="6.8s"
       repeatCount="indefinite"/>
 
     <image
-      href="https://cdn.simpleicons.org/openai"
-      x="512"
-      y="30"
+      href="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/openai.svg"
+      x="510"
+      y="29"
       width="30"
       height="30"
       preserveAspectRatio="xMidYMid meet"/>
-
   </g>
 
 
@@ -364,58 +99,42 @@
   ================================================== -->
 
   <g>
-
     <animateTransform
       attributeName="transform"
       type="translate"
-      values="
-        0 0;
-        4 -3;
-        6 1;
-        2 5;
-        -3 3;
-        0 0"
+      values="0 0; 4 -3; 6 1; 2 5; -3 3; 0 0"
       dur="7.1s"
       repeatCount="indefinite"/>
 
     <image
-      href="https://cdn.simpleicons.org/github"
-      x="548"
-      y="22"
+      href="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/github.svg"
+      x="547"
+      y="20"
       width="30"
       height="30"
       preserveAspectRatio="xMidYMid meet"/>
-
   </g>
 
 
   <!-- =================================================
-       GEMINI
+       GOOGLE GEMINI
   ================================================== -->
 
   <g>
-
     <animateTransform
       attributeName="transform"
       type="translate"
-      values="
-        0 0;
-        -3 -5;
-        -5 -1;
-        -2 4;
-        3 2;
-        0 0"
+      values="0 0; -3 -5; -5 -1; -2 4; 3 2; 0 0"
       dur="6.5s"
       repeatCount="indefinite"/>
 
     <image
-      href="https://cdn.simpleicons.org/googlegemini"
-      x="447"
-      y="52"
+      href="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/googlegemini.svg"
+      x="445"
+      y="51"
       width="32"
       height="32"
       preserveAspectRatio="xMidYMid meet"/>
-
   </g>
 
 
@@ -424,28 +143,20 @@
   ================================================== -->
 
   <g>
-
     <animateTransform
       attributeName="transform"
       type="translate"
-      values="
-        0 0;
-        3 -4;
-        5 0;
-        3 5;
-        -2 3;
-        0 0"
+      values="0 0; 3 -4; 5 0; 3 5; -2 3; 0 0"
       dur="7.4s"
       repeatCount="indefinite"/>
 
     <image
-      href="https://cdn.simpleicons.org/deepseek"
-      x="486"
-      y="62"
+      href="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/deepseek.svg"
+      x="484"
+      y="61"
       width="36"
-      height="26"
+      height="27"
       preserveAspectRatio="xMidYMid meet"/>
-
   </g>
 
 
@@ -454,28 +165,20 @@
   ================================================== -->
 
   <g>
-
     <animateTransform
       attributeName="transform"
       type="translate"
-      values="
-        0 0;
-        -4 -3;
-        -6 1;
-        -3 5;
-        2 3;
-        0 0"
+      values="0 0; -4 -3; -6 1; -3 5; 2 3; 0 0"
       dur="6.9s"
       repeatCount="indefinite"/>
 
     <image
-      href="https://cdn.simpleicons.org/docker"
-      x="403"
-      y="65"
+      href="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/docker.svg"
+      x="401"
+      y="64"
       width="37"
-      height="26"
+      height="27"
       preserveAspectRatio="xMidYMid meet"/>
-
   </g>
 
 
@@ -484,28 +187,20 @@
   ================================================== -->
 
   <g>
-
     <animateTransform
       attributeName="transform"
       type="translate"
-      values="
-        0 0;
-        2 -4;
-        4 0;
-        2 4;
-        -2 2;
-        0 0"
+      values="0 0; 2 -4; 4 0; 2 4; -2 2; 0 0"
       dur="5.9s"
       repeatCount="indefinite"/>
 
     <image
-      href="https://cdn.simpleicons.org/vim"
-      x="430"
-      y="91"
+      href="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/vim.svg"
+      x="428"
+      y="89"
       width="30"
       height="24"
       preserveAspectRatio="xMidYMid meet"/>
-
   </g>
 
 
@@ -514,28 +209,20 @@
   ================================================== -->
 
   <g>
-
     <animateTransform
       attributeName="transform"
       type="translate"
-      values="
-        0 0;
-        -3 -3;
-        -5 0;
-        -2 4;
-        3 2;
-        0 0"
+      values="0 0; -3 -3; -5 0; -2 4; 3 2; 0 0"
       dur="7.6s"
       repeatCount="indefinite"/>
 
     <image
-      href="https://cdn.simpleicons.org/linux"
-      x="466"
-      y="92"
+      href="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/linux.svg"
+      x="464"
+      y="90"
       width="30"
       height="24"
       preserveAspectRatio="xMidYMid meet"/>
-
   </g>
 
 
@@ -544,49 +231,20 @@
   ================================================== -->
 
   <g>
-
     <animateTransform
       attributeName="transform"
       type="translate"
-      values="
-        0 0;
-        3 -4;
-        5 0;
-        2 5;
-        -3 2;
-        0 0"
+      values="0 0; 3 -4; 5 0; 2 5; -3 2; 0 0"
       dur="6.6s"
       repeatCount="indefinite"/>
 
     <image
-      href="https://cdn.simpleicons.org/gigabyte"
-      x="525"
-      y="92"
+      href="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/gigabyte.svg"
+      x="523"
+      y="91"
       width="36"
       height="22"
       preserveAspectRatio="xMidYMid meet"/>
-
   </g>
 
 </g>
-
-
-  <!-- =====================================================
-       SUBTLE LIGHT PARTICLES
-  ====================================================== -->
-
-  <g fill="#00e5cc" opacity=".5">
-
-    <circle cx="382" cy="31" r=".8"/>
-
-    <circle cx="414" cy="48" r=".7"/>
-
-    <circle cx="535" cy="58" r=".8"/>
-
-    <circle cx="588" cy="42" r=".7"/>
-
-    <circle cx="566" cy="105" r=".8"/>
-
-  </g>
-
-</svg>
