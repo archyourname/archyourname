@@ -1,250 +1,56 @@
-<!-- =====================================================
-     FLOATING BRAND LOGOS
-     REAL SVG ASSETS FROM GITHUB
-     WATER / BUBBLE MOTION
-====================================================== -->
+<svg width="600" height="120" viewBox="0 0 600 120" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .banner-bg {
+      fill: #0a1a1a;
+    }
+    .type-text {
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 28px;
+      font-weight: bold;
+      fill: #00e5cc;
+    }
+    .sub-text {
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 18px;
+      fill: #37b6a8;
+    }
 
-<g filter="url(#logoGlow)">
+    /* Full cycle = 6s: type line1 (0-2s), type line2 (2-4s), hold (4-5s), reset (5-6s), repeat */
+    .line1-clip {
+      animation: reveal1 6s steps(20, end) infinite;
+    }
+    .line2-clip {
+      animation: reveal2 6s steps(19, end) infinite;
+    }
 
-  <!-- =================================================
-       NVIDIA
-  ================================================== -->
+    @keyframes reveal1 {
+      0%          { width: 0; }
+      33.3%       { width: 340px; }
+      83.3%       { width: 340px; }
+      91.6%       { width: 0; }
+      100%        { width: 0; }
+    }
+    @keyframes reveal2 {
+      0%, 33.3%   { width: 0; }
+      66.6%       { width: 330px; }
+      83.3%       { width: 330px; }
+      91.6%       { width: 0; }
+      100%        { width: 0; }
+    }
 
-  <g>
-    <animateTransform
-      attributeName="transform"
-      type="translate"
-      values="0 0; 2 -4; 5 -1; 3 4; -1 2; 0 0"
-      dur="5.4s"
-      repeatCount="indefinite"/>
+  </style>
 
-    <image
-      href="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/nvidia.svg"
-      x="390"
-      y="24"
-      width="36"
-      height="24"
-      preserveAspectRatio="xMidYMid meet"/>
-  </g>
+  <rect class="banner-bg" width="600" height="120" rx="8"/>
 
+  <!-- Line 1 -->
+  <clipPath id="clip1">
+    <rect class="line1-clip" x="0" y="15" height="40"/>
+  </clipPath>
+  <text class="type-text" x="10" y="45" clip-path="url(#clip1)">Hi, I'm PontMedusa </text>
 
-  <!-- =================================================
-       MSI
-  ================================================== -->
-
-  <g>
-    <animateTransform
-      attributeName="transform"
-      type="translate"
-      values="0 0; -3 -3; -5 1; -2 5; 3 3; 0 0"
-      dur="6.2s"
-      repeatCount="indefinite"/>
-
-    <image
-      href="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/msi.svg"
-      x="430"
-      y="17"
-      width="34"
-      height="26"
-      preserveAspectRatio="xMidYMid meet"/>
-  </g>
-
-
-  <!-- =================================================
-       INTEL
-  ================================================== -->
-
-  <g>
-    <animateTransform
-      attributeName="transform"
-      type="translate"
-      values="0 0; 3 -3; 5 1; 2 5; -2 2; 0 0"
-      dur="5.8s"
-      repeatCount="indefinite"/>
-
-    <image
-      href="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/intel.svg"
-      x="472"
-      y="20"
-      width="36"
-      height="25"
-      preserveAspectRatio="xMidYMid meet"/>
-  </g>
-
-
-  <!-- =================================================
-       OPENAI
-  ================================================== -->
-
-  <g>
-    <animateTransform
-      attributeName="transform"
-      type="translate"
-      values="0 0; -2 -4; -4 0; -2 4; 2 3; 0 0"
-      dur="6.8s"
-      repeatCount="indefinite"/>
-
-    <image
-      href="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/openai.svg"
-      x="510"
-      y="29"
-      width="30"
-      height="30"
-      preserveAspectRatio="xMidYMid meet"/>
-  </g>
-
-
-  <!-- =================================================
-       GITHUB
-  ================================================== -->
-
-  <g>
-    <animateTransform
-      attributeName="transform"
-      type="translate"
-      values="0 0; 4 -3; 6 1; 2 5; -3 3; 0 0"
-      dur="7.1s"
-      repeatCount="indefinite"/>
-
-    <image
-      href="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/github.svg"
-      x="547"
-      y="20"
-      width="30"
-      height="30"
-      preserveAspectRatio="xMidYMid meet"/>
-  </g>
-
-
-  <!-- =================================================
-       GOOGLE GEMINI
-  ================================================== -->
-
-  <g>
-    <animateTransform
-      attributeName="transform"
-      type="translate"
-      values="0 0; -3 -5; -5 -1; -2 4; 3 2; 0 0"
-      dur="6.5s"
-      repeatCount="indefinite"/>
-
-    <image
-      href="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/googlegemini.svg"
-      x="445"
-      y="51"
-      width="32"
-      height="32"
-      preserveAspectRatio="xMidYMid meet"/>
-  </g>
-
-
-  <!-- =================================================
-       DEEPSEEK
-  ================================================== -->
-
-  <g>
-    <animateTransform
-      attributeName="transform"
-      type="translate"
-      values="0 0; 3 -4; 5 0; 3 5; -2 3; 0 0"
-      dur="7.4s"
-      repeatCount="indefinite"/>
-
-    <image
-      href="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/deepseek.svg"
-      x="484"
-      y="61"
-      width="36"
-      height="27"
-      preserveAspectRatio="xMidYMid meet"/>
-  </g>
-
-
-  <!-- =================================================
-       DOCKER
-  ================================================== -->
-
-  <g>
-    <animateTransform
-      attributeName="transform"
-      type="translate"
-      values="0 0; -4 -3; -6 1; -3 5; 2 3; 0 0"
-      dur="6.9s"
-      repeatCount="indefinite"/>
-
-    <image
-      href="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/docker.svg"
-      x="401"
-      y="64"
-      width="37"
-      height="27"
-      preserveAspectRatio="xMidYMid meet"/>
-  </g>
-
-
-  <!-- =================================================
-       VIM
-  ================================================== -->
-
-  <g>
-    <animateTransform
-      attributeName="transform"
-      type="translate"
-      values="0 0; 2 -4; 4 0; 2 4; -2 2; 0 0"
-      dur="5.9s"
-      repeatCount="indefinite"/>
-
-    <image
-      href="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/vim.svg"
-      x="428"
-      y="89"
-      width="30"
-      height="24"
-      preserveAspectRatio="xMidYMid meet"/>
-  </g>
-
-
-  <!-- =================================================
-       LINUX
-  ================================================== -->
-
-  <g>
-    <animateTransform
-      attributeName="transform"
-      type="translate"
-      values="0 0; -3 -3; -5 0; -2 4; 3 2; 0 0"
-      dur="7.6s"
-      repeatCount="indefinite"/>
-
-    <image
-      href="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/linux.svg"
-      x="464"
-      y="90"
-      width="30"
-      height="24"
-      preserveAspectRatio="xMidYMid meet"/>
-  </g>
-
-
-  <!-- =================================================
-       GIGABYTE
-  ================================================== -->
-
-  <g>
-    <animateTransform
-      attributeName="transform"
-      type="translate"
-      values="0 0; 3 -4; 5 0; 2 5; -3 2; 0 0"
-      dur="6.6s"
-      repeatCount="indefinite"/>
-
-    <image
-      href="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/gigabyte.svg"
-      x="523"
-      y="91"
-      width="36"
-      height="22"
-      preserveAspectRatio="xMidYMid meet"/>
-  </g>
-
-</g>
+  <!-- Line 2 -->
+  <clipPath id="clip2">
+    <rect class="line2-clip" x="0" y="65" height="30"/>
+  </clipPath>
+  <text class="sub-text" x="10" y="90" clip-path="url(#clip2)">Computer Enthusiast</text>
+</svg>
