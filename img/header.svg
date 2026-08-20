@@ -1,56 +1,665 @@
-<svg width="600" height="120" viewBox="0 0 600 120" xmlns="http://www.w3.org/2000/svg">
-  <style>
-    .banner-bg {
-      fill: #0a1a1a;
-    }
-    .type-text {
-      font-family: 'Courier New', Courier, monospace;
-      font-size: 28px;
-      font-weight: bold;
-      fill: #00e5cc;
-    }
-    .sub-text {
-      font-family: 'Courier New', Courier, monospace;
-      font-size: 18px;
-      fill: #37b6a8;
-    }
+<svg width="600" height="120" viewBox="0 0 600 120"
+     xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink">
 
-    /* Full cycle = 6s: type line1 (0-2s), type line2 (2-4s), hold (4-5s), reset (5-6s), repeat */
-    .line1-clip {
-      animation: reveal1 6s steps(20, end) infinite;
-    }
-    .line2-clip {
-      animation: reveal2 6s steps(19, end) infinite;
-    }
+  <defs>
 
-    @keyframes reveal1 {
-      0%          { width: 0; }
-      33.3%       { width: 340px; }
-      83.3%       { width: 340px; }
-      91.6%       { width: 0; }
-      100%        { width: 0; }
-    }
-    @keyframes reveal2 {
-      0%, 33.3%   { width: 0; }
-      66.6%       { width: 330px; }
-      83.3%       { width: 330px; }
-      91.6%       { width: 0; }
-      100%        { width: 0; }
-    }
+    <!-- =========================
+         BACKGROUND
+    ========================== -->
 
-  </style>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#061313"/>
+      <stop offset="1" stop-color="#071827"/>
+    </linearGradient>
 
-  <rect class="banner-bg" width="600" height="120" rx="8"/>
+    <!-- =========================
+         CITY GLOW
+    ========================== -->
 
-  <!-- Line 1 -->
-  <clipPath id="clip1">
-    <rect class="line1-clip" x="0" y="15" height="40"/>
-  </clipPath>
-  <text class="type-text" x="10" y="45" clip-path="url(#clip1)">Hi, I'm PontMedusa </text>
+    <linearGradient id="cityGlow"
+                    x1="0" y1="0"
+                    x2="0" y2="1">
 
-  <!-- Line 2 -->
-  <clipPath id="clip2">
-    <rect class="line2-clip" x="0" y="65" height="30"/>
-  </clipPath>
-  <text class="sub-text" x="10" y="90" clip-path="url(#clip2)">Computer Enthusiast</text>
+      <stop offset="0"
+            stop-color="#12323a"
+            stop-opacity=".55"/>
+
+      <stop offset="1"
+            stop-color="#061313"
+            stop-opacity=".05"/>
+
+    </linearGradient>
+
+
+    <!-- =========================
+         WATER GLOW
+    ========================== -->
+
+    <radialGradient id="waterGlow">
+
+      <stop offset="0"
+            stop-color="#00e5cc"
+            stop-opacity=".12"/>
+
+      <stop offset=".45"
+            stop-color="#00e5cc"
+            stop-opacity=".04"/>
+
+      <stop offset="1"
+            stop-color="#00e5cc"
+            stop-opacity="0"/>
+
+    </radialGradient>
+
+
+    <!-- =========================
+         SOFT GLOW
+    ========================== -->
+
+    <filter id="softGlow"
+            x="-100%"
+            y="-100%"
+            width="300%"
+            height="300%">
+
+      <feGaussianBlur stdDeviation="4"/>
+
+    </filter>
+
+
+    <!-- =========================
+         LOGO GLOW
+    ========================== -->
+
+    <filter id="logoGlow"
+            x="-100%"
+            y="-100%"
+            width="300%"
+            height="300%">
+
+      <feGaussianBlur
+        in="SourceGraphic"
+        stdDeviation="1.5"
+        result="blur"/>
+
+      <feMerge>
+
+        <feMergeNode
+          in="blur"/>
+
+        <feMergeNode
+          in="SourceGraphic"/>
+
+      </feMerge>
+
+    </filter>
+
+  </defs>
+
+
+  <!-- =====================================================
+       BACKGROUND
+  ====================================================== -->
+
+  <rect
+    width="600"
+    height="120"
+    rx="9"
+    fill="url(#bg)"
+    stroke="#123333"
+    stroke-width="1"/>
+
+
+  <!-- =====================================================
+       CITY / TECHNOLOGY BACKGROUND
+  ====================================================== -->
+
+  <g opacity=".38">
+
+    <!-- horizon -->
+
+    <path
+      d="M0 105H600"
+      stroke="#0b6870"
+      stroke-width="1"/>
+
+
+    <!-- buildings -->
+
+    <path
+      d="
+        M370 105V74H380V105
+        M383 105V61H394V105
+        M397 105V79H408V105
+        M411 105V52H423V105
+        M426 105V70H438V105
+        M441 105V59H452V105
+        M455 105V44H470V105
+        M474 105V67H487V105
+        M491 105V52H505V105
+        M509 105V74H521V105
+        M525 105V57H539V105
+        M543 105V68H557V105
+        M561 105V48H576V105
+        M580 105V72H600V105
+      "
+      fill="url(#cityGlow)"/>
+
+
+    <!-- building windows -->
+
+    <g
+      fill="#00e5cc"
+      opacity=".22">
+
+      <path d="M386 67h4v4h-4zM386 77h4v4h-4zM386 87h4v4h-4z"/>
+
+      <path d="M415 58h4v4h-4zM415 68h4v4h-4zM415 78h4v4h-4z"/>
+
+      <path d="M445 65h4v4h-4zM445 75h4v4h-4zM445 85h4v4h-4z"/>
+
+      <path d="M460 51h4v4h-4zM460 61h4v4h-4zM460 71h4v4h-4z"/>
+
+      <path d="M496 59h4v4h-4zM496 69h4v4h-4zM496 79h4v4h-4z"/>
+
+      <path d="M530 64h4v4h-4zM530 74h4v4h-4zM530 84h4v4h-4z"/>
+
+      <path d="M566 55h4v4h-4zM566 65h4v4h-4zM566 75h4v4h-4z"/>
+
+    </g>
+
+  </g>
+
+
+  <!-- =====================================================
+       ATMOSPHERIC WATER LIGHT
+  ====================================================== -->
+
+  <ellipse
+    cx="510"
+    cy="68"
+    rx="105"
+    ry="55"
+    fill="url(#waterGlow)"
+    filter="url(#softGlow)"/>
+
+
+  <!-- =====================================================
+       TEXT
+  ====================================================== -->
+
+  <text
+    x="12"
+    y="45"
+    font-family="Courier New, monospace"
+    font-size="27"
+    font-weight="bold"
+    fill="#00e5cc">
+
+    Hi, I'm PontMedusa
+
+  </text>
+
+
+  <text
+    x="12"
+    y="87"
+    font-family="Courier New, monospace"
+    font-size="17"
+    fill="#37b6a8">
+
+    Computer Enthusiast
+
+  </text>
+
+
+  <!-- =====================================================
+       SMALL DECORATIVE LINE
+  ====================================================== -->
+
+  <path
+    d="M12 96H230"
+    stroke="#00e5cc"
+    stroke-width=".6"
+    opacity=".25"/>
+
+
+  <!-- =====================================================
+       FLOATING LOGOS
+       WATER / BUBBLE MOTION
+  ====================================================== -->
+
+  <g filter="url(#logoGlow)">
+
+
+    <!-- =================================================
+         NVIDIA
+    ================================================== -->
+
+    <g>
+
+      <animateTransform
+        attributeName="transform"
+        type="translate"
+        values="
+          0 0;
+          2 -4;
+          5 -1;
+          3 4;
+          -1 2;
+          0 0"
+        dur="5.4s"
+        repeatCount="indefinite"/>
+
+      <animateTransform
+        attributeName="transform"
+        additive="sum"
+        type="rotate"
+        values="-2 410 35;
+                1 410 35;
+                -1 410 35;
+                2 410 35;
+                -2 410 35"
+        dur="6s"
+        repeatCount="indefinite"/>
+
+      <image
+        href="https://cdn.simpleicons.org/nvidia/76B900"
+        x="393"
+        y="25"
+        width="34"
+        height="20"
+        preserveAspectRatio="xMidYMid meet"/>
+
+    </g>
+
+
+    <!-- =================================================
+         MSI
+    ================================================== -->
+
+    <g>
+
+      <animateTransform
+        attributeName="transform"
+        type="translate"
+        values="
+          0 0;
+          -3 -3;
+          -5 1;
+          -2 5;
+          3 3;
+          0 0"
+        dur="6.2s"
+        repeatCount="indefinite"/>
+
+      <image
+        href="https://cdn.simpleicons.org/msi/FF0000"
+        x="432"
+        y="17"
+        width="32"
+        height="24"
+        preserveAspectRatio="xMidYMid meet"/>
+
+    </g>
+
+
+    <!-- =================================================
+         INTEL
+    ================================================== -->
+
+    <g>
+
+      <animateTransform
+        attributeName="transform"
+        type="translate"
+        values="
+          0 0;
+          3 -3;
+          5 1;
+          2 5;
+          -2 2;
+          0 0"
+        dur="5.8s"
+        repeatCount="indefinite"/>
+
+      <image
+        href="https://cdn.simpleicons.org/intel/147AFF"
+        x="474"
+        y="22"
+        width="34"
+        height="22"
+        preserveAspectRatio="xMidYMid meet"/>
+
+    </g>
+
+
+    <!-- =================================================
+         OPENAI
+    ================================================== -->
+
+    <g>
+
+      <animateTransform
+        attributeName="transform"
+        type="translate"
+        values="
+          0 0;
+          -2 -4;
+          -4 0;
+          -2 4;
+          2 3;
+          0 0"
+        dur="6.8s"
+        repeatCount="indefinite"/>
+
+      <image
+        href="https://cdn.simpleicons.org/openai/FFFFFF"
+        x="512"
+        y="30"
+        width="28"
+        height="28"
+        preserveAspectRatio="xMidYMid meet"/>
+
+    </g>
+
+
+    <!-- =================================================
+         GITHUB
+    ================================================== -->
+
+    <g>
+
+      <animateTransform
+        attributeName="transform"
+        type="translate"
+        values="
+          0 0;
+          4 -3;
+          6 1;
+          2 5;
+          -3 3;
+          0 0"
+        dur="7.1s"
+        repeatCount="indefinite"/>
+
+      <image
+        href="https://cdn.simpleicons.org/github/FFFFFF"
+        x="548"
+        y="22"
+        width="29"
+        height="29"
+        preserveAspectRatio="xMidYMid meet"/>
+
+    </g>
+
+
+    <!-- =================================================
+         GEMINI
+    ================================================== -->
+
+    <g>
+
+      <animateTransform
+        attributeName="transform"
+        type="translate"
+        values="
+          0 0;
+          -3 -5;
+          -5 -1;
+          -2 4;
+          3 2;
+          0 0"
+        dur="6.5s"
+        repeatCount="indefinite"/>
+
+      <image
+        href="https://cdn.simpleicons.org/googlegemini/8AB4F8"
+        x="447"
+        y="52"
+        width="30"
+        height="30"
+        preserveAspectRatio="xMidYMid meet"/>
+
+    </g>
+
+
+    <!-- =================================================
+         DEEPSEEK
+    ================================================== -->
+
+    <g>
+
+      <animateTransform
+        attributeName="transform"
+        type="translate"
+        values="
+          0 0;
+          3 -4;
+          5 0;
+          3 5;
+          -2 3;
+          0 0"
+        dur="7.4s"
+        repeatCount="indefinite"/>
+
+      <image
+        href="https://cdn.simpleicons.org/deepseek/4D9CFF"
+        x="486"
+        y="62"
+        width="35"
+        height="25"
+        preserveAspectRatio="xMidYMid meet"/>
+
+    </g>
+
+
+    <!-- =================================================
+         DOCKER
+    ================================================== -->
+
+    <g>
+
+      <animateTransform
+        attributeName="transform"
+        type="translate"
+        values="
+          0 0;
+          -4 -3;
+          -6 1;
+          -3 5;
+          2 3;
+          0 0"
+        dur="6.9s"
+        repeatCount="indefinite"/>
+
+      <image
+        href="https://cdn.simpleicons.org/docker/2496ED"
+        x="403"
+        y="65"
+        width="35"
+        height="25"
+        preserveAspectRatio="xMidYMid meet"/>
+
+    </g>
+
+
+    <!-- =================================================
+         VIM
+    ================================================== -->
+
+    <g>
+
+      <animateTransform
+        attributeName="transform"
+        type="translate"
+        values="
+          0 0;
+          2 -4;
+          4 0;
+          2 4;
+          -2 2;
+          0 0"
+        dur="5.9s"
+        repeatCount="indefinite"/>
+
+      <image
+        href="https://cdn.simpleicons.org/vim/A6CE39"
+        x="430"
+        y="91"
+        width="29"
+        height="23"
+        preserveAspectRatio="xMidYMid meet"/>
+
+    </g>
+
+
+    <!-- =================================================
+         LINUX
+    ================================================== -->
+
+    <g>
+
+      <animateTransform
+        attributeName="transform"
+        type="translate"
+        values="
+          0 0;
+          -3 -3;
+          -5 0;
+          -2 4;
+          3 2;
+          0 0"
+        dur="7.6s"
+        repeatCount="indefinite"/>
+
+      <image
+        href="https://cdn.simpleicons.org/linux/FFFFFF"
+        x="466"
+        y="92"
+        width="28"
+        height="23"
+        preserveAspectRatio="xMidYMid meet"/>
+
+    </g>
+
+
+    <!-- =================================================
+         AORUS / GIGABYTE
+    ================================================== -->
+
+    <g>
+
+      <animateTransform
+        attributeName="transform"
+        type="translate"
+        values="
+          0 0;
+          3 -4;
+          5 0;
+          2 5;
+          -3 2;
+          0 0"
+        dur="6.6s"
+        repeatCount="indefinite"/>
+
+      <image
+        href="https://cdn.simpleicons.org/gigabyte/FFFFFF"
+        x="525"
+        y="92"
+        width="34"
+        height="20"
+        preserveAspectRatio="xMidYMid meet"/>
+
+    </g>
+
+
+  </g>
+
+
+  <!-- =====================================================
+       SMALL BUBBLES
+  ====================================================== -->
+
+  <g
+    fill="none"
+    stroke="#00e5cc"
+    stroke-width=".7"
+    opacity=".35">
+
+    <circle
+      cx="397"
+      cy="91"
+      r="2">
+
+      <animate
+        attributeName="cy"
+        values="91;85;79;73"
+        dur="5s"
+        repeatCount="indefinite"/>
+
+      <animate
+        attributeName="cx"
+        values="397;400;396;399"
+        dur="5s"
+        repeatCount="indefinite"/>
+
+    </circle>
+
+
+    <circle
+      cx="576"
+      cy="90"
+      r="1.5">
+
+      <animate
+        attributeName="cy"
+        values="90;83;77;70"
+        dur="6s"
+        repeatCount="indefinite"/>
+
+      <animate
+        attributeName="cx"
+        values="576;573;578;575"
+        dur="6s"
+        repeatCount="indefinite"/>
+
+    </circle>
+
+
+    <circle
+      cx="530"
+      cy="18"
+      r="1.3">
+
+      <animate
+        attributeName="cy"
+        values="18;14;10;6"
+        dur="5.5s"
+        repeatCount="indefinite"/>
+
+    </circle>
+
+  </g>
+
+
+  <!-- =====================================================
+       SUBTLE LIGHT PARTICLES
+  ====================================================== -->
+
+  <g fill="#00e5cc" opacity=".5">
+
+    <circle cx="382" cy="31" r=".8"/>
+
+    <circle cx="414" cy="48" r=".7"/>
+
+    <circle cx="535" cy="58" r=".8"/>
+
+    <circle cx="588" cy="42" r=".7"/>
+
+    <circle cx="566" cy="105" r=".8"/>
+
+  </g>
+
 </svg>
